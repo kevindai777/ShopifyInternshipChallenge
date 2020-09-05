@@ -1,5 +1,6 @@
 import React from 'react';
 import Movies from './Movies.js';
+import { Form, Button } from 'react-bootstrap';
 import styles from '../App.css'
 
 class SearchBar extends React.Component {
@@ -26,8 +27,10 @@ class SearchBar extends React.Component {
     }
 
     renderMovies = () => {
-      console.log(this.state.movies.Search)
-      return this.state.movies.Search == undefined ? 'Must input something' : this.state.movies.Search.map((array) => {
+      return <div>
+        Results for: "{this.state.query}"
+        <div className="grid">
+        {this.state.movies.Search == undefined ? 'Results Empty/Must Input Something' : this.state.movies.Search.map((array) => {
         return <Movies
                   title={array.Title}
                   image={array.Poster}
@@ -35,17 +38,32 @@ class SearchBar extends React.Component {
                   id={array.imdbID}
                   list={this.props.list}
                   addToList={this.props.addToList}
+                  addBack={this.props.addBack}
                />
-      })
+      })}
+        </div>
+      </div>
+    }
+
+    showEmpty = () => {
+      return <div className="empty">
+        Nothing Searched Yet...
+      </div>
     }
     
     render() {
         return (
-          <div className='grid-container'>
-            <form onSubmit={this.handleSubmit}>
-              <input onChange={(event) => this.query(event)}></input>
-            </form>
-            {this.state.movies ? this.renderMovies() : 'Nothing Searched Yet...'}
+          <div>
+            <Form noValidate onSubmit={this.handleSubmit}>
+              <Form.Label>Movie Title: </Form.Label>
+                <Form.Control
+                  type="text"
+                  name="firstName"
+                  onChange={(event) => this.query(event)}
+                />
+              <Button type="submit">Submit form</Button>
+            </Form>
+            {this.state.movies ? this.renderMovies() : this.showEmpty()}
           </div>
         )
     }

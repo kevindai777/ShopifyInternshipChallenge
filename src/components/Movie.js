@@ -5,7 +5,7 @@ class Movie extends React.Component {
         return(
             <div>
                 {this.props.movie}
-                Remove from list<button onClick={(event) => this.props.removeFromList(this.props.movie)}>Remove</button>
+                <button onClick={(event) => {this.props.removeFromList(this.props.movie); this.props.addBackToList(this.props.movie)}}>Remove</button>
             </div>
         )
     }
