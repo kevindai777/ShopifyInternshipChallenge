@@ -8,10 +8,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <HashRouter basename="/">
+        <Switch>
           <Route exact path="/" component={MainContainer}/>
           <Route exact path="/movies/:id" render={(props) => <MovieDetails {...props} />}/>
-        </HashRouter>
+        </Switch>
       </div>
     )
   }
