@@ -61,8 +61,8 @@ class SearchBar extends React.Component {
                   name="firstName"
                   onChange={(event) => this.query(event)}
                 />
-              <Button type="submit">Submit form</Button>
             </Form>
+            <br></br>
             {this.state.movies ? this.renderMovies() : this.showEmpty()}
           </div>
         )

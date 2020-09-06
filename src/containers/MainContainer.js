@@ -50,6 +50,7 @@ class MainContainer extends React.Component {
     render() {
         return (
             <div>
+                <h1 className="appTitle">The Movie Mall</h1>
                 <YourList
                     list={this.state.list}
                     removeFromList={this.removeFromList}

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../App.css';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import alt from './noimage.jpg'
 
 class Movies extends React.Component {
 
@@ -68,17 +69,29 @@ class Movies extends React.Component {
         })
     }
 
+    learnMoreOrNot = () => {
+        return this.state.learnMore ? "Less Info" : "More Info"
+    }
+
+    determineImage = () => {
+        if (this.props.image == 'N/A') {
+            return alt
+        } else {
+            return this.props.image
+        }
+    }
+
     render() {
         return (
-            <div>
+            <div className="movie-listed-container">
                 <div>
                     {console.log(this.props.addBack)}
                     {this.props.addBack != null && this.props.addBack == this.props.title ? this.nominateMovie() : null}
                     <h1>{this.props.title ? this.displayTitleAndYear() : null}</h1>
                     <br></br>
-                    <img className="card__image" src={this.props.image}/>
+                    <img className="card__image" src={this.determineImage()} alt={alt}/>
                     <br></br>
-                    <Button variant="primary" onClick={(event) => this.getMoreInfo()}>More Info</Button>
+                    <Button variant="primary" onClick={(event) => this.getMoreInfo()}>{this.learnMoreOrNot()}</Button>
                     <br></br>
                     {this.state.learnMore ? this.showMore(): null}
                     <br></br>
