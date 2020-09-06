@@ -1,4 +1,4 @@
-##Shopify Internship Challenge
+## Shopify Internship Challenge
 
 Extra Features:
 
