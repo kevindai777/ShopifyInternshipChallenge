@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/ShopifyInternshipChallenge/static/css/main.46af9a89.chunk.css",
-    "main.js": "/ShopifyInternshipChallenge/static/js/main.d3e0eef3.chunk.js",
-    "main.js.map": "/ShopifyInternshipChallenge/static/js/main.d3e0eef3.chunk.js.map",
+    "main.js": "/ShopifyInternshipChallenge/static/js/main.b4f6a04a.chunk.js",
+    "main.js.map": "/ShopifyInternshipChallenge/static/js/main.b4f6a04a.chunk.js.map",
     "runtime-main.js": "/ShopifyInternshipChallenge/static/js/runtime-main.abf07e27.js",
     "runtime-main.js.map": "/ShopifyInternshipChallenge/static/js/runtime-main.abf07e27.js.map",
-    "static/js/2.a7129804.chunk.js": "/ShopifyInternshipChallenge/static/js/2.a7129804.chunk.js",
-    "static/js/2.a7129804.chunk.js.map": "/ShopifyInternshipChallenge/static/js/2.a7129804.chunk.js.map",
+    "static/js/2.09363846.chunk.js": "/ShopifyInternshipChallenge/static/js/2.09363846.chunk.js",
+    "static/js/2.09363846.chunk.js.map": "/ShopifyInternshipChallenge/static/js/2.09363846.chunk.js.map",
     "index.html": "/ShopifyInternshipChallenge/index.html",
-    "precache-manifest.83e4d31ec8ec90377ae35c78335421b3.js": "/ShopifyInternshipChallenge/precache-manifest.83e4d31ec8ec90377ae35c78335421b3.js",
+    "precache-manifest.0acd3529e898cc900fc70b4b5eb4052d.js": "/ShopifyInternshipChallenge/precache-manifest.0acd3529e898cc900fc70b4b5eb4052d.js",
     "service-worker.js": "/ShopifyInternshipChallenge/service-worker.js",
     "static/css/main.46af9a89.chunk.css.map": "/ShopifyInternshipChallenge/static/css/main.46af9a89.chunk.css.map",
-    "static/js/2.a7129804.chunk.js.LICENSE.txt": "/ShopifyInternshipChallenge/static/js/2.a7129804.chunk.js.LICENSE.txt",
+    "static/js/2.09363846.chunk.js.LICENSE.txt": "/ShopifyInternshipChallenge/static/js/2.09363846.chunk.js.LICENSE.txt",
     "static/media/noimage.jpg": "/ShopifyInternshipChallenge/static/media/noimage.b9537641.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.abf07e27.js",
-    "static/js/2.a7129804.chunk.js",
+    "static/js/2.09363846.chunk.js",
     "static/css/main.46af9a89.chunk.css",
-    "static/js/main.d3e0eef3.chunk.js"
+    "static/js/main.b4f6a04a.chunk.js"
   ]
 }
