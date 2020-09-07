@@ -6,10 +6,6 @@ import alt from './noimage.jpg'
 
 class Movies extends React.Component {
 
-    componentWillMount() {
-
-    }
-
     state = {
         learnMore: false,
         nominated: false
@@ -44,9 +40,7 @@ class Movies extends React.Component {
     displayTitleAndYear = () => {
         let title
         if (this.props.title.length > 20) {
-            let parts = this.props.title.split(' ')
-            title = parts.slice(0, 3)
-            title = parts.join(' ') + '...'
+            title = this.props.title.substring(0, 20) + '...'
         } else {
             title = this.props.title
         }
@@ -85,8 +79,6 @@ class Movies extends React.Component {
         return (
             <div className="movie-listed-container">
                 <div>
-                    {console.log(this.props.addBack)}
-                    {this.props.addBack != null && this.props.addBack == this.props.title ? this.nominateMovie() : null}
                     <h1>{this.props.title ? this.displayTitleAndYear() : null}</h1>
                     <br></br>
                     <img className="card__image" src={this.determineImage()} alt={alt}/>
@@ -95,7 +87,7 @@ class Movies extends React.Component {
                     <br></br>
                     {this.state.learnMore ? this.showMore(): null}
                     <br></br>
-                    {this.state.nominated ? this.cantNominate() : this.canNominate()}
+                    {this.state.nominated && this.props.list.includes(this.props.title) ? this.cantNominate() : this.canNominate()}
                 </div>
             </div>
         )

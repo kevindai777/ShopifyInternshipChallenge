@@ -5,9 +5,9 @@ import styles from '../App.css'
 
 class SearchBar extends React.Component {
     state = {
-        movies: null,
-        query: null,
-      }
+      movies: null,
+      query: null,
+    }
     
     query = (event) => {
       this.setState({
@@ -28,7 +28,9 @@ class SearchBar extends React.Component {
 
     renderMovies = () => {
       return <div>
-        Results for: "{this.state.query}"
+        <div className="enter">
+          Results for: "{this.state.query}"
+        </div>
         <div className="grid">
         {this.state.movies.Search == undefined ? 'Results Empty/Must Input Something' : this.state.movies.Search.map((array) => {
         return <Movies
@@ -39,6 +41,7 @@ class SearchBar extends React.Component {
                   list={this.props.list}
                   addToList={this.props.addToList}
                   addBack={this.props.addBack}
+                  list={this.props.list}
                />
       })}
         </div>

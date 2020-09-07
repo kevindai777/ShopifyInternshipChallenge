@@ -11,6 +11,7 @@ class YourList extends React.Component {
     }
 
     showList = () => {
+
       return this.props.list.map(movie => 
         <Movie
           movie={movie}
@@ -25,14 +26,14 @@ class YourList extends React.Component {
         <Banner 
           title="Nominations complete! Feel free to add more if needed :)"
           css={this.state.bannerCss}
-          visibleTime={5000}
+          visibleTime={10000}
         />
       </div>
     }
     
     render() {
         return (
-          <div>
+          <div className="right">
             <h1>List</h1>
             {this.props.list ? this.showList() : "List is empty"}
             <br></br>

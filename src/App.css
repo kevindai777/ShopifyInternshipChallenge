@@ -159,7 +159,6 @@ div {
 }
 
 .btn:focus {
-  outline: 2px dotted #55d7dc;
 }
 
 
@@ -252,6 +251,8 @@ form {
 .grid {
   display: flex;
   flex-wrap: wrap;
+  width: 1000px;
+  float: left;
 }
 
 
@@ -528,7 +529,7 @@ h5 {
 .summary {
   position: relative;
   left: 400px;
-  top: -540px;
+  top: -620px;
 }
 
 .movie-listed-container {
@@ -538,4 +539,10 @@ h5 {
 
 .appTitle {
   text-align: center;
+}
+
+.right {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 1015px;
 }
